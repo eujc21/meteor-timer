@@ -1,0 +1,58 @@
+<template name="formCreate">
+<form id="crid">
+    <div class="row">
+        <div class="large-5 medium-5 columns panel">
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="small-2 columns"><i class="fa fa-user"></i></div>
+                    <div class="small-10 columns"><input class="name" type="text" placeholder="Name" /></div>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="small-2 columns"><i class="fa fa-calendar-o"></i></div>
+                    <div class="small-10 columns"><input class="date" type="date" placeholder="Date" /></div>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="small-2 columns"><i class="fa fa-code-fork"></i></div>
+                    <div class="small-10 columns"><input class="lineOperation" type="text" placeholder="Line Operation" /></div>
+                </div>
+            </div>
+            <div class="large-12 columns" style="padding-bottom: 30px;">
+                <div class="row">
+                    <div class="small-2 columns shi"><i class="fa fa-sun-o"></i><i class="fa fa-coffee"></i><i class="fa fa-moon-o"></i></div>
+                    <div class="small-10 columns"><select class="shift medium">
+                        <option DISABLED>Choose</option>
+                        <option>1st Shift</option>
+                        <option>2nd Shift</option>
+                        <option>3rd Shift</option>
+                    </select></div>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="row">
+                  <div class="small-2 columns">
+                  </div>
+                    <div class="small-10 columns">
+                        <a class="createForm button expand">Create Form</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="large-7 medium-7 columns">
+            <div class="row collapse">
+                <div class="small-10 columns">
+                    <input id="contCat" type="text" placeholder="Add Timed Categories">
+                </div>
+                <div class="small-2 columns">
+                    <a id="addCat" href="#" class="button postfix"><i class="fa fa-plus"></i></a>
+                </div>
+            </div>
+            <table id="catTable" role="grid">
+            </table>
+        </div>
+    </div>
+</form>
+</template>

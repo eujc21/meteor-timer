@@ -1,0 +1,45 @@
+@import '../../stylesheets/variables.less';
+@import '../../stylesheets/lib/elements.less';
+
+.icon-bar{
+    background: #0B81AD;
+}
+.header-wrapper {
+    background-color: #000;
+    height: 200px;
+    background-position: 100% 100%;
+    transition: height 0.8s;
+        color: @secondaryFontColor;
+
+    .ui.header {
+        font-size: 3em;
+        padding-top: 50px;
+
+        > .sub.header {
+            color: #fff;
+        }
+    }
+
+    .resize.button {
+        margin-top: 40px;
+        font-size: 1.5em;
+    }
+
+    .angle.icon {
+        color: @secondaryFontColor;
+    }
+
+    a:hover {
+        color: @secondaryLinkHoverColor;
+    }
+
+    &.active {
+        height: 900px;
+    }
+}
+
+.icon-bar{
+  i{
+    opacity:.6;
+  }
+}

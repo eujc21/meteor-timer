@@ -1,0 +1,47 @@
+<template name="generatedForm">
+  {{#each list}} {{> tableBox}} {{/each}}
+</template>
+
+<template name="tableBox">
+  <form id="{{_id}}">
+    <div class="ui fluid accordion">
+      <div class="left floated sav_del">
+        <a id="saveT" href="#"><i class="fa fa-floppy-o"></i></a> <span>|</span>
+        <a id="deleteT" href="#"><i class="fa fa-trash"></i></a>
+      </div>
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <span>{{name}} | {{lineOperation}}</span>
+      </div>
+      <div class="content">
+        {{#each table}} {{> categoryRow}} {{/each}}
+      </div>
+    </div>
+  </form>
+</template>
+
+<template name="categoryRow">
+  <div id="{{name}}" class="alternate">
+  <div class="ui divided list">
+    <div class="item">
+      {{#if flag}}
+        <div id="listing_{{_id}}" class="right floated ui">
+          <a id="stopWatchjs1" href="#"><i class="stop icon"></i></a> </div>
+        {{else}}
+        <div id="listing_{{_id}}" class="right floated ui">
+          <a id="stopWatchjs" href="#"><i class="play circle icon"></i></a></div>
+      {{/if}}
+        </div>
+        <div class="content">
+          <div class="header"> {{name}} {{> times}} <input id="total" value="{{sum _id}}">
+          </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="times">
+  <input type="hidden" id="start" value="{{startTime _id}}">
+  <input type="hidden" id="stop">
+  <input type="hidden" id="total">
+</template>
